@@ -13,11 +13,9 @@ function cool_redirect(url) {
 	    }
 	},Number(1200/item.innerText.length).toFixed(0))
 	g = setTimeout(() => {
-		if (i == 12) {
 			setTimeout(() => {window.location.href=url;},200);
 			document.body.innerHTML = '<link rel="stylesheet" href="style.css">'
-	    }
-	},1200)
+	},1400)
 	})
 }
 function cool_show(what,where,href = '#') {
