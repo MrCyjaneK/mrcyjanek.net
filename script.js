@@ -12,12 +12,12 @@ function cool_redirect(url) {
 			clearInterval(itemloop[item.id])
 	    }
 	},Number(1200/item.innerText.length).toFixed(0))
-	setInterval(() => {
+	g = setTimeout(() => {
 		if (i == 12) {
 			setTimeout(() => {window.location.href=url;},200);
 			document.body.innerHTML = '<link rel="stylesheet" href="style.css">'
 	    }
-	},42)
+	},1200)
 	})
 }
 function cool_show(what,where,href = '#') {
