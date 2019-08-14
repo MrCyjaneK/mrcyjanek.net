@@ -5,17 +5,22 @@ function cool_redirect(url) {
 	array.forEach( item => {
 	item=document.getElementById(item)
 	i=0
-	itemloop[item.id]=setInterval(() => {
+	itemloop[item.id] = setInterval(() => {
 		item.innerText = item.innerText.substr(0,item.innerText.length-1)
 		if (item.innerText=="") {
 			i++;
 			clearInterval(itemloop[item.id])
 	    }
 	},Number(1200/item.innerText.length).toFixed(0))
-	g = setTimeout(() => {
+	y = 'n';
+	g = setInterval(() => {
+		if (y == 'n') {
 			setTimeout(() => {window.location.href=url;},200);
 			document.body.innerHTML = '<link rel="stylesheet" href="style.css">'
-	},1400)
+			y = 'y'
+			clearInterval(g);
+		}
+	},200)
 	})
 }
 function cool_show(what,where,href = '#') {
