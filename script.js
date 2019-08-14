@@ -14,13 +14,13 @@ function cool_redirect(url) {
 	},Number(1200/item.innerText.length).toFixed(0))
 	y = 'n';
 	g = setInterval(() => {
-		if (y == 'n' && i == 12) {
+		if (y == 'n') {
 			setTimeout(() => {window.location.href=url;},200);
 			document.body.innerHTML = '<link rel="stylesheet" href="style.css">'
 			y = 'y'
 			clearInterval(g);
 		}
-	},200)
+	},1400)
 	})
 }
 function cool_show(what,where,href = '#') {
